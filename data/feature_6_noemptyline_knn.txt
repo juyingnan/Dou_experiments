@@ -1,0 +1,66 @@
+Examine datafile 'feature_6_noemptyline.csv' gave the following results:
+Number of Features: 8
+InputFormat       : C4.5
+
+Phase 1: Reading Datafile: feature_6_noemptyline.csv
+Start:          0 @ Thu Jul 16 15:07:11 2020
+Finished:     569 @ Thu Jul 16 15:07:11 2020
+Calculating Entropy         Thu Jul 16 15:07:11 2020
+Lines of data     : 569
+DB Entropy        : 0.49142931
+Number of Classes : 2
+
+Feats	Vals	InfoGain	GainRatio
+    1    556	0.032797902	0.0075919443 NUMERIC
+    2    569	0.028492740	0.0065929353 NUMERIC
+    3    569	0.020995832	0.0048582258 NUMERIC
+    4    569	0.015613658	0.0036128444 NUMERIC
+    5    569	0.024621733	0.0056972230 NUMERIC
+    6    565	0.021174254	0.0048995107 NUMERIC
+    7      2	0.0037047235	0.050999531 NUMERIC
+    8    569	0.041029372	0.0094937867 NUMERIC
+
+Preparation took 0 seconds, 10 milliseconds and 716 microseconds
+Feature Permutation based on GainRatio/Values :
+< 7, 8, 1, 2, 5, 6, 3, 4 >
+Phase 2: Building multi index on Datafile: feature_6_noemptyline.csv
+Start:          0 @ Thu Jul 16 15:07:11 2020
+Finished:     569 @ Thu Jul 16 15:07:11 2020
+
+Phase 3: Learning from Datafile: feature_6_noemptyline.csv
+Start:          0 @ Thu Jul 16 15:07:11 2020
+Finished:     569 @ Thu Jul 16 15:07:11 2020
+
+Size of InstanceBase = 4554 Nodes, (182160 bytes), 11.07 % compression
+Learning took 0 seconds, 7 milliseconds and 617 microseconds
+
+Starting to test using Leave One Out
+Writing output in:          feature_6_noemptyline.csv.LOO.E.nw.k1.out
+Algorithm     : LOO
+Global metric : Euclidean Distance
+Deviant Feature Metrics:(none)
+Weighting     : No Weighting
+
+Tested:      1 @ Thu Jul 16 15:07:11 2020
+Tested:      2 @ Thu Jul 16 15:07:11 2020
+Tested:      3 @ Thu Jul 16 15:07:11 2020
+Tested:      4 @ Thu Jul 16 15:07:11 2020
+Tested:      5 @ Thu Jul 16 15:07:11 2020
+Tested:      6 @ Thu Jul 16 15:07:11 2020
+Tested:      7 @ Thu Jul 16 15:07:11 2020
+Tested:      8 @ Thu Jul 16 15:07:11 2020
+Tested:      9 @ Thu Jul 16 15:07:11 2020
+Tested:     10 @ Thu Jul 16 15:07:11 2020
+Tested:    100 @ Thu Jul 16 15:07:12 2020
+Ready:     569 @ Thu Jul 16 15:07:15 2020
+Seconds taken: 4.4908 (126.70 p/s)
+
+Scores per Value Class:
+class  |	TP	FP	TN	FN	precision	recall(TPR)	FPR		F-score		AUC
+     0 |    	478   	52   	9   	30 	0.90189 	0.94094 	0.85246 	0.92100 	0.54424
+     1 |    	9   	30   	478   	52 	0.23077 	0.14754 	0.05906 	0.18000 	0.54424
+F-Score beta=1, microav: 0.841562
+F-Score beta=1, macroav: 0.550501
+AUC, microav:            0.544243
+AUC, macroav:            0.544243
+overall accuracy:        0.855888  (487/569)
